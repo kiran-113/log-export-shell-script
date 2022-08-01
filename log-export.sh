@@ -1,6 +1,6 @@
 #!/bin/bash
-dpkg -s zip
-if [ zip? -eq 0]; then
+dpkg -s $zip &> /dev/null
+if [ $zip? -eq 0]; then
    echo " Package zip is installed"
 else 
    echo "Package zip is NOT Installed, Please Install zip"
