@@ -1,4 +1,10 @@
 #!/bin/bash
+dpkg -s zip
+if [ zip? -eq 0]; then
+   echo " Package zip is installed"
+else 
+   echo "Package zip is NOT Installed, Please Install zip"
+fi
 read -p "Enter Source Directory Full Path to Find Log Files:" path
 cd $path
 find . -name "*.log"  -print | zip log-export.zip -@
